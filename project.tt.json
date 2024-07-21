@@ -1,0 +1,12 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "SAST-Daily-management",
+  "appid": "cli_a603fea010f8900c",
+  "setting": {
+    "es6": true,
+    "urlCheck": true,
+    "postcss": false,
+    "minified": false
+  },
+   "compileType": "miniprogram"
+}

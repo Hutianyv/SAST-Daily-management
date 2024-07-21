@@ -1,0 +1,15 @@
+{
+  "miniprogramRoot": "./dist",
+  "projectname": "SAST-Daily-management",
+  "description": "基于101SAST场地工位管理、人员动态流动、日常场地维护比较困难的问题，期望构建一个飞书小程序，基于小程序对于日常实现数字化的管理。",
+  "appid": "cli_a603fea010f8900c",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "enhance": false,
+    "compileHotReLoad": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram"
+}
