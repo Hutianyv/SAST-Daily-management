@@ -1,8 +1,20 @@
-.tabbar {
+#tabbar {
   position: absolute;
   bottom: 0;
   display: flex;
-  height: 200px;
-  width: 100%;
+  align-items: center;
   justify-content: space-around;
+  height: 100px;
+  width: 100%;
+}
+#tabbar .tab-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+#tabbar .tab-item Image {
+  width: 100px;
+  height: 100px;
 }

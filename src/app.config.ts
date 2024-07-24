@@ -1,7 +1,7 @@
 export default defineAppConfig({
   pages: [
     'pages/home/index',
-    'pages/me/index'
+    'pages/column/index'
   ],
   subPackages: [
     {

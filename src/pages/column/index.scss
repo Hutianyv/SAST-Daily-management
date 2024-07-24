@@ -1,0 +1,27 @@
+#column-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+  
+}
+#column-container .to-checkin {
+  height: 350px;
+  width: 80%;
+  background-color: skyblue;
+  border-radius: 30px;
+}
+#column-container .to-clean {
+  height: 350px;
+  width: 80%;
+  background-color: skyblue;
+  border-radius: 30px;
+}
+#column-container .to-workspace {
+  height: 350px;
+  width: 80%;
+  background-color: skyblue;
+  border-radius: 30px;
+}

@@ -1,39 +1,41 @@
 import Taro from "@tarojs/taro";
 import { View, Text } from "@tarojs/components";
 import Layout from "../layout";
+import { cameraAuth } from "@/utils/authority/Auth"
 import "./index.scss";
-import RoutePath from "@/constants/route";
-export default function Index(): JSX.Element {
-  function navigate(url) {
-    Taro.navigateTo({ url });
-  }
+
+
+export default function Home() {
+
+  const scan = async () => {
+    try {
+      const res = await Taro.scanCode({
+        onlyFromCamera: true,
+      });
+      console.log('扫描结果:', res.result);
+
+    } catch (err) {
+      console.log('扫描失败:', err);
+    }
+  };
+  const startScan = async () => {
+    try {
+      const hasCameraAuth = await cameraAuth();
+    if (hasCameraAuth) {
+      scan();
+    } else {
+      console.log('未能相机权限，无法进行扫描');
+    }
+    } catch (err) {
+      console.log('相机权限获取失败:', err);
+    }
+  };
+
   return (
     <Layout>
       <View id="home-container">
-        <Text
-          className="to-checkin"
-          onClick={() => {
-            navigate(RoutePath.CHECKIN);
-          }}
-        >
-          签到打卡
-        </Text>
-        <Text
-          className="to-clean"
-          onClick={() => {
-            navigate(RoutePath.DAILYCLEAN);
-          }}
-        >
-          日常卫生打扫
-        </Text>
-        <Text
-          className="to-workspace"
-          onClick={() => {
-            navigate(RoutePath.WORKSPACE);
-          }}
-        >
-          工位调动
-        </Text>
+        <View className="scan" onClick={startScan}></View>
+        <Text>请扫描工位铭牌二维码进行签到</Text>
       </View>
     </Layout>
   );
