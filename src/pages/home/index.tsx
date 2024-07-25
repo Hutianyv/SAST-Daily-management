@@ -1,7 +1,7 @@
 import Taro from "@tarojs/taro";
 import { View, Text } from "@tarojs/components";
 import Layout from "../layout";
-import { cameraAuth } from "@/utils/authority/Auth"
+import { cameraAuth } from "@/utils/Auth"
 import "./index.scss";
 
 

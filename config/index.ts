@@ -24,6 +24,8 @@ export default defineConfig(async (merge, { command, mode }) => {
     },
     copy: {
       patterns: [
+        //防止svg引用被忽略
+        { from: 'src/assets', to: 'dist/assets' },
       ],
       options: {
       }
