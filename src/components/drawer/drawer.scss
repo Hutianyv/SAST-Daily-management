@@ -1,0 +1,16 @@
+#drawer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  gap: 10px;
+  height: 100px;
+  width: 100%;
+  background-color: cadetblue;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+#drawer image {
+ position: absolute;
+ right: 10%;
+}

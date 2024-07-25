@@ -2,14 +2,11 @@ import Taro from "@tarojs/taro";
 import { View, Text, Image} from "@tarojs/components";
 import "./tabbar.scss";
 import RoutePath from "@/constants/route";
-import HOME from "@/assets/tabbar/home.svg";
-import COLUMN from "@/assets/tabbar/column.svg";
-import HOME_ACTIVE from "@/assets/tabbar/home-active.svg";
-import COLUMN_ACTIVE from "@/assets/tabbar/column-active.svg";
+import { TABBAR } from "@/constants/assets";
 const TabBar = () => {
   const currentPath = Taro.getCurrentInstance().router?.path;
-  const homeIconSrc = currentPath === '/pages/home/index' ? HOME_ACTIVE : HOME;
-  const columnIconSrc = currentPath === '/pages/column/index' ? COLUMN_ACTIVE : COLUMN;
+  const homeIconSrc = currentPath === '/pages/home/index' ? TABBAR.HOME_ACTIVE : TABBAR.HOME;
+  const columnIconSrc = currentPath === '/pages/column/index' ? TABBAR.COLUMN_ACTIVE : TABBAR.COLUMN;
   const switchTab = (url) => {
     Taro.reLaunch({ url });
   };
