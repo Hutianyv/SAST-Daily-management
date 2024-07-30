@@ -19,5 +19,5 @@ export default defineAppConfig({
     navigationBarTitleText: 'WeChat',
     navigationBarTextStyle: 'black' ,
   },
-  
+
 })
