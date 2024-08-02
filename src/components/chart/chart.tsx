@@ -1,47 +1,53 @@
-import React, { useEffect } from 'react';
-import { View } from '@tarojs/components';
-import F2 from '@antv/f2';
-import Taro from "@tarojs/taro";
+import {VChart} from '@visactor/taro-vchart';
+import {useState} from "react";
 
-interface PieChartProps {
-  data: { name: string; value: number }[];
-}
-
-const PieChart: React.FC<PieChartProps> = ({ data }) => {
-  useEffect(() => {
-    // 获取canvas的上下文
-    const canvasNode = Taro.createSelectorQuery().select('#chart').node();
-    canvasNode.fields({ node: true, size: true }).exec((res) => {
-      const canvas = res[0].node;
-      const context = canvas.getContext('2d');
-
-      // 初始化 F2 Chart
-      const chart = new F2.Chart({
-        context,
-        width: 300,
-        height: 300,
-      });
-
-      // 配置数据源
-      chart.source(data);
-
-      // 配置饼图
-      chart.interval().position('name*value').color('name').adjust('stack');
-
-      // 渲染图表
-      chart.render();
-
-      return () => {
-        chart.destroy();
-      };
-    });
-  }, [data]);
+const ChartComponent = ({data}) => {
+  // 1. 准备图表配置项与数据
+  const [spec] = useState({
+    data: [
+      {
+        id: 'data1',
+        values: [
+          ...data
+        ]
+      }
+    ],
+    type: 'pie',
+    color: ['#3ceb36', '#ff6370'],
+    outerRadius: 0.6,
+    innerRadius: 0.3,
+    categoryField: 'name',
+    valueField: 'value',
+    // legends: {
+    //   visible: true
+    // },
+    // 添加标签配置
+    label: {
+      visible: true,
+      textStyle: {
+        fontSize: 12,
+        color: '#000'
+      }
+    },
+  });
 
   return (
-    <View>
-      <canvas id="chart" style={{ width: '100%', height: '300px' }} />
-    </View>
+    <VChart
+      type="lark"
+      spec={spec}
+      canvasId="pie"
+      style={{height: '35vh', width: '100%'}}
+      onChartInit={() => {
+        console.log('init pie');
+      }}
+      onChartReady={() => {
+        console.log('ready pie');
+      }}
+      onChartUpdate={() => {
+        console.log('update pie');
+      }}
+    />
   );
 };
 
-export default PieChart;
+export default ChartComponent;

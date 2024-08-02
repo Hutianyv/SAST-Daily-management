@@ -1,7 +1,6 @@
-import {View} from "@tarojs/components";
+import {Text, View} from "@tarojs/components";
 import "./index.scss";
-import PieChart from "@/components/chart/PieChart";
-import DonutChart from "@/components/chart/donutChart";
+import DonutChart from "@/components/chart/chart";
 import {useState} from "react";
 
 export default function Checkin() {
@@ -9,6 +8,8 @@ export default function Checkin() {
   console.log("进入checkin页面");
 
   const [percentage, setPercentage] = useState(0);//已签到的人数的百分比
+  const [signedInList, setSignedInList] = useState(["1", "2", "3"]);
+  const [notSignedInList, setNotSignedInList] = useState(["4", "5", "6"]);
 
   // request.get('').then(res => {
   //   setPercentage(res.data.percentage);
@@ -19,13 +20,33 @@ export default function Checkin() {
     console.log(item);
   }
   const data = [
-    {value: 0.3, color: '#ff6370'}, //
-    {value: 0.7, color: '#3ceb36'}, // 未签到的百分比
+    {value: 40, name: "已签到"},
+    {value: 60, name: "未签到"},
   ];
   return (
-    <View className="checkin">
-      <PieChart data={data} width={300} height={400} onSectorClick={handleFn}></PieChart>
-      <DonutChart></DonutChart>
+    <View>
+      <View className="checkin">
+        <DonutChart data={data}></DonutChart>
+      </View>
+      <View className="list-container">
+        <View className="list-section">
+          <Text className="list-title">已签到</Text>
+          <View className="list">
+            {signedInList.map((name) => (
+              <Text key={name} className="list-item">{name}</Text>
+            ))}
+          </View>
+        </View>
+        <View className="list-section">
+          <Text className="list-title">未签到</Text>
+          <View className="list">
+            {notSignedInList.map((name) => (
+              <Text key={name} className="list-item">{name}</Text>
+            ))}
+          </View>
+        </View>
+      </View>
     </View>
+
   );
 }

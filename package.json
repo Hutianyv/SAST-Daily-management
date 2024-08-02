@@ -22,7 +22,6 @@
   ],
   "author": "",
   "dependencies": {
-    "@antv/f2": "^5.5.2",
     "@babel/runtime": "^7.21.5",
     "@nutui/nutui-react-taro": "^2.6.14",
     "@nutui/nutui-taro": "^4.3.11",
@@ -47,20 +46,15 @@
     "@tarojs/shared": "3.6.31",
     "@tarojs/taro": "3.6.31",
     "@types/echarts": "^4.9.22",
+    "@visactor/taro-vchart": "^1.11.10",
     "axios": "^1.7.2",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog-zh": "^0.0.2",
     "dotenv": "^16.4.5",
-    "echarts": "^5.5.1",
-    "echarts-for-react": "^3.0.2",
-    "echarts-for-weixin": "^1.0.2",
-    "echarts-taro3-react": "^1.0.13",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-redux": "^9.1.2",
-    "redux-thunk": "^3.1.0",
-    "taro-echarts": "^1.1.2",
-    "ucharts": "^0.0.0"
+    "redux-thunk": "^3.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",
