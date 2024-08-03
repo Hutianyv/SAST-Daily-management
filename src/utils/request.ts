@@ -1,5 +1,5 @@
 import Taro from '@tarojs/taro';
-import axios from 'axios';
+import {axios} from 'taro-axios';
 
 // 创建 axios 实例
 const api = axios.create({

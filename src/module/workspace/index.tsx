@@ -6,7 +6,7 @@ export default function Workspace() {
 
   return (
     <View className="workspace">
-      <Text>Hello world!345</Text>
+      <Text>Hello world!</Text>
     </View>
   );
 }
