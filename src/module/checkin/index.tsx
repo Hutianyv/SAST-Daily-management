@@ -2,26 +2,23 @@ import {Text, View} from "@tarojs/components";
 import "./index.scss";
 import DonutChart from "@/components/chart/chart";
 import {useState} from "react";
+import request from "@/utils/request";
 
 export default function Checkin() {
 
   console.log("进入checkin页面");
 
-  const [percentage, setPercentage] = useState(0);//已签到的人数的百分比
   const [signedInList, setSignedInList] = useState(["1", "2", "3"]);
   const [notSignedInList, setNotSignedInList] = useState(["4", "5", "6"]);
 
-  // request.get('').then(res => {
-  //   setPercentage(res.data.percentage);
-  // }
-  // setPercentage(30)
+  request.get('/getCheckinList').then(res => {
+    setSignedInList(res.data.signedInList);
+    setNotSignedInList(res.data.notSignedInList);
+  });
 
-  const handleFn = (item) => {
-    console.log(item);
-  }
   const data = [
-    {value: 40, name: "已签到"},
-    {value: 60, name: "未签到"},
+    {value: signedInList.length, name: "已签到"},
+    {value: notSignedInList.length, name: "未签到"},
   ];
   return (
     <View>
