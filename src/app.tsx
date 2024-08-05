@@ -1,20 +1,21 @@
-import { PropsWithChildren } from 'react';
-import { useLaunch } from '@tarojs/taro';
-import { View } from '@tarojs/components';
+import {PropsWithChildren} from 'react';
+import {useLaunch} from '@tarojs/taro';
+import {View} from '@tarojs/components';
 import '@nutui/nutui-taro/dist/style.css';
 import './app.scss';
+import './mock/index';
 
-function App(props: PropsWithChildren<any>){
+function App(props: PropsWithChildren<any>) {
   useLaunch(() => {
     console.log('App launched.');
   });
 
   return (
-    
-      <View>
-        {props.children}
-      </View>
-    
+
+    <View>
+      {props.children}
+    </View>
+
   )
 }
 

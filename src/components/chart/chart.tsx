@@ -1,15 +1,13 @@
 import {VChart} from '@visactor/taro-vchart';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 const ChartComponent = ({data}) => {
   // 1. 准备图表配置项与数据
-  const [spec] = useState({
+  const [spec,setSpec] = useState({
     data: [
       {
-        id: 'data1',
-        values: [
-          ...data
-        ]
+        id: 'data',
+        values: data
       }
     ],
     type: 'pie',
@@ -30,6 +28,17 @@ const ChartComponent = ({data}) => {
       }
     },
   });
+  useEffect(() => {
+    setSpec(prevSpec => ({
+      ...prevSpec,
+      data: [
+        {
+          ...prevSpec.data[0],
+          values: data
+        }
+      ]
+    }));
+  }, [data]);
 
   return (
     <VChart
