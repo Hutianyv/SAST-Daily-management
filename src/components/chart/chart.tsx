@@ -55,6 +55,7 @@ const ChartComponent = ({data}) => {
       onChartUpdate={() => {
         console.log('update pie');
       }}
+      // chartConstructor={VChart as any}//断言为any类型，绕过ts的类型检查（可是加了这行就报错）
     />
   );
 };

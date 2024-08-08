@@ -1,0 +1,48 @@
+.table-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.table-header {
+  display: flex;
+  font-size: 30px;
+  background-color: #ddd;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+.table-row {
+  display: flex;
+  font-size:30px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.table-cell {
+  flex: 1;
+  text-align: center;
+}
+.popup-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+  padding: 60px 100px; /* 可选：添加内边距 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 可选：添加阴影 */
+  z-index: 1000; /* 确保在最上层 */
+  opacity: 0; /* 初始状态透明 */
+  transition: opacity 0.5s ease; /* 添加过渡效果 */
+  pointer-events: none; /* 防止点击事件 */
+
+}
+.popup-center.visible {
+  opacity: 1; /* 当添加 visible 类时不透明 */
+  pointer-events: auto; /* 允许点击事件 */
+}
+
+.nut-btn{
+  font-size: 30px;
+}
