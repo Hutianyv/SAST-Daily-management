@@ -31,5 +31,8 @@
 
 .list-item {
   padding: 5px 0;
+  display: block; /* 确保每个list-item占据一整行 */
+  width: 100%; /* 让每个list-item占满父容器的宽度 */
+  box-sizing: border-box;
 }
 

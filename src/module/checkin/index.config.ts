@@ -1,3 +1,3 @@
 export default definePageConfig({
-  navigationBarTitleText: '签到打卡'
+  navigationBarTitleText: '签到情况'
 })
