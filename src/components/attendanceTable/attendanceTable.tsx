@@ -48,7 +48,7 @@ const AttendanceTable: React.FC<AttendanceTableProps> = ({data}) => {
           <Text className="table-cell">{record.seatNumber}</Text>
           <Text className="table-cell">{record.name}</Text>
           <Text className="table-cell" style={{
-            backgroundColor: record.status === '绑定中' ? 'green' : 'red',
+            backgroundColor: record.status === '绑定中' ? '#77DD77' : '#FF6F61',
           }} onClick={() => handleOperation(record)}
           >
             {record.status}
