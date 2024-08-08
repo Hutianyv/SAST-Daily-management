@@ -19,7 +19,7 @@ export default defineConfig(async (merge, {command, mode}) => {
     outputRoot: 'dist',
     plugins: [
       '@tarojs/plugin-platform-lark',
-      '@tarojs/plugin-html'
+      '@tarojs/plugin-html',
       '@tarojs/plugin-http',
       [
         '@tarojs/plugin-mock',
