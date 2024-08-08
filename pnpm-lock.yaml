@@ -31,7 +31,7 @@ importers:
         version: 3.6.31(@pmmmwh/react-refresh-webpack-plugin@0.5.15(react-refresh@0.11.0)(type-fest@3.13.1)(webpack-dev-server@4.11.1(webpack@5.78.0(@swc/core@1.3.96)))(webpack@5.78.0(@swc/core@1.3.96)))(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(react-refresh@0.11.0)(react@18.3.1)
       '@tarojs/plugin-html':
         specifier: 3.6.31
-        version: 3.6.31(@pmmmwh/react-refresh-webpack-plugin@0.5.15(react-refresh@0.11.0)(types-fest@3.13.1)(webpack-dev-server@4.11.1(webpack@5.78.0(@swc/core@1.3.96)))(webpack@5.78.0(@swc/core@1.3.96)))(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(react-refresh@0.11.0)(react@18.3.1)
+        version: 3.6.31(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))
       '@tarojs/plugin-http':
         specifier: ^4.0.4
         version: 4.0.4(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))
@@ -43,10 +43,10 @@ importers:
         version: 3.6.31(@tarojs/components@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(@types/react@18.3.3)(postcss@8.4.39)(react@18.3.1)(vue@3.4.33(typescript@5.5.3)))(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))
       '@tarojs/plugin-platform-h5':
         specifier: 3.6.31
-        version: 3.6.31(@tarojs/helper@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3))
+        version: 3.6.31(@tarojs/helper@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(@types/react@18.3.3)(postcss@8.4.39)(react@18.3.1)(vue@3.4.33(typescript@5.5.3))
       '@tarojs/plugin-platform-harmony-hybrid':
         specifier: 3.6.31
-        version: 3.6.31(@tarojs/helper@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3))
+        version: 3.6.31(@tarojs/helper@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(@types/react@18.3.3)(postcss@8.4.39)(react@18.3.1)(vue@3.4.33(typescript@5.5.3))
       '@tarojs/plugin-platform-jd':
         specifier: 3.6.31
         version: 3.6.31(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))
@@ -101,6 +101,9 @@ importers:
       dotenv:
         specifier: ^16.4.5
         version: 16.4.5
+      mockjs:
+        specifier: ^1.1.0
+        version: 1.1.0
       react:
         specifier: ^18.0.0
         version: 18.3.1
@@ -122,7 +125,7 @@ importers:
         version: 7.24.9
       '@pmmmwh/react-refresh-webpack-plugin':
         specifier: ^0.5.5
-        version: 0.5.15(react-refresh@0.11.0)(types-fest@3.13.1)(webpack-dev-server@4.11.1(webpack@5.78.0(@swc/core@1.3.96)))(webpack@5.78.0(@swc/core@1.3.96))
+        version: 0.5.15(react-refresh@0.11.0)(type-fest@3.13.1)(webpack-dev-server@4.11.1(webpack@5.78.0(@swc/core@1.3.96)))(webpack@5.78.0(@swc/core@1.3.96))
       '@tarojs/cli':
         specifier: 3.6.31
         version: 3.6.31(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))
@@ -131,7 +134,7 @@ importers:
         version: 3.6.31(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3))
       '@tarojs/test-utils-react':
         specifier: ^0.1.1
-        version: 0.1.1(wnx7atyprnd4fqlihcfmm2an3m)
+        version: 0.1.1(@babel/core@7.24.9)(@tarojs/components@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(@types/react@18.3.3)(postcss@8.4.39)(react@18.3.1)(vue@3.4.33(typescript@5.5.3)))(@tarojs/helper@3.6.31)(@tarojs/plugin-framework-react@3.6.31(@pmmmwh/react-refresh-webpack-plugin@0.5.15(react-refresh@0.11.0)(type-fest@3.13.1)(webpack-dev-server@4.11.1(webpack@5.78.0(@swc/core@1.3.96)))(webpack@5.78.0(@swc/core@1.3.96)))(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(react-refresh@0.11.0)(react@18.3.1))(@tarojs/plugin-platform-h5@3.6.31(@tarojs/helper@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(@types/react@18.3.3)(postcss@8.4.39)(react@18.3.1)(vue@3.4.33(typescript@5.5.3)))(@tarojs/react@3.6.31(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(react@18.3.1))(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@tarojs/webpack5-runner':
         specifier: 3.6.31
         version: 3.6.31(@babel/core@7.24.9)(@swc/core@1.3.96)(@tarojs/components@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(@types/react@18.3.3)(postcss@8.4.39)(react@18.3.1)(vue@3.4.33(typescript@5.5.3)))(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(@types/react@18.3.3)(@vue/compiler-sfc@3.4.33)(postcss@8.4.39)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.3)(vue@3.4.33(typescript@5.5.3))(webpack@5.78.0(@swc/core@1.3.96))
@@ -1773,6 +1776,7 @@ packages:
 
   '@tarojs/plugin-html@3.6.31':
     resolution: {integrity: sha512-M/y+p2yCWB3t1U+PS/fL7z49xEykbQcVG/CyT2XHIiu/ApPxCsOwkQ2svyEftDCpdP5mM2XrHqCfsQeH5RwZPw==}
+
   '@tarojs/plugin-http@4.0.4':
     resolution: {integrity: sha512-O0SyFKlTOaE8lsDUv/uQ1U43/WVkPv8jdfMiRdTs+m+GF50M8M31ILKTjYBivDpU71lxWjGbud6Bw4ncG+chxA==}
     engines: {node: '>= 18'}
@@ -9819,7 +9823,7 @@ snapshots:
       acorn-walk: 8.3.3
       lodash: 4.17.21
     optionalDependencies:
-      '@pmmmwh/react-refresh-webpack-plugin': 0.5.15(react-refresh@0.11.0)(types-fest@3.13.1)(webpack-dev-server@4.11.1(webpack@5.78.0(@swc/core@1.3.96)))(webpack@5.78.0(@swc/core@1.3.96))
+      '@pmmmwh/react-refresh-webpack-plugin': 0.5.15(react-refresh@0.11.0)(type-fest@3.13.1)(webpack-dev-server@4.11.1(webpack@5.78.0(@swc/core@1.3.96)))(webpack@5.78.0(@swc/core@1.3.96))
       react: 18.3.1
       react-refresh: 0.11.0
     transitivePeerDependencies:
@@ -9839,6 +9843,8 @@ snapshots:
     transitivePeerDependencies:
       - '@swc/helpers'
       - '@tarojs/taro'
+      - supports-color
+
   '@tarojs/plugin-http@4.0.4(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))':
     dependencies:
       '@tarojs/runtime': 3.6.31(@tarojs/shared@3.6.31)
@@ -9868,7 +9874,7 @@ snapshots:
       - '@tarojs/taro'
       - supports-color
 
-  '@tarojs/plugin-platform-h5@3.6.31(@tarojs/helper@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3))':
+  '@tarojs/plugin-platform-h5@3.6.31(@tarojs/helper@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(@types/react@18.3.3)(postcss@8.4.39)(react@18.3.1)(vue@3.4.33(typescript@5.5.3))':
     dependencies:
       '@tarojs/components': 3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(@types/react@18.3.3)(postcss@8.4.39)(react@18.3.1)(vue@3.4.33(typescript@5.5.3))
       '@tarojs/components-react': 3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3))
@@ -9890,15 +9896,16 @@ snapshots:
       - '@types/webpack'
       - '@types/webpack-dev-server'
       - postcss
+      - react
       - supports-color
       - vue
 
-  '@tarojs/plugin-platform-harmony-hybrid@3.6.31(@tarojs/helper@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3))':
+  '@tarojs/plugin-platform-harmony-hybrid@3.6.31(@tarojs/helper@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(@types/react@18.3.3)(postcss@8.4.39)(react@18.3.1)(vue@3.4.33(typescript@5.5.3))':
     dependencies:
       '@tarojs/api': 3.6.31
       '@tarojs/components': 3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(@types/react@18.3.3)(postcss@8.4.39)(react@18.3.1)(vue@3.4.33(typescript@5.5.3))
       '@tarojs/components-react': 3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3))
-      '@tarojs/plugin-platform-h5': 3.6.31(@tarojs/helper@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3))
+      '@tarojs/plugin-platform-h5': 3.6.31(@tarojs/helper@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(@types/react@18.3.3)(postcss@8.4.39)(react@18.3.1)(vue@3.4.33(typescript@5.5.3))
       '@tarojs/router': 3.6.31(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))
       '@tarojs/runtime': 3.6.31(@tarojs/shared@3.6.31)
       '@tarojs/service': 3.6.31(@tarojs/shared@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))
@@ -9923,6 +9930,7 @@ snapshots:
       - '@types/webpack-dev-server'
       - debug
       - postcss
+      - react
       - supports-color
       - vue
 
@@ -10109,13 +10117,13 @@ snapshots:
       - '@babel/core'
       - supports-color
 
-  '@tarojs/test-utils-react@0.1.1(wnx7atyprnd4fqlihcfmm2an3m)':
-    dependencies:
+  ? '@tarojs/test-utils-react@0.1.1(@babel/core@7.24.9)(@tarojs/components@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(@types/react@18.3.3)(postcss@8.4.39)(react@18.3.1)(vue@3.4.33(typescript@5.5.3)))(@tarojs/helper@3.6.31)(@tarojs/plugin-framework-react@3.6.31(@pmmmwh/react-refresh-webpack-plugin@0.5.15(react-refresh@0.11.0)(type-fest@3.13.1)(webpack-dev-server@4.11.1(webpack@5.78.0(@swc/core@1.3.96)))(webpack@5.78.0(@swc/core@1.3.96)))(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(react-refresh@0.11.0)(react@18.3.1))(@tarojs/plugin-platform-h5@3.6.31(@tarojs/helper@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(@types/react@18.3.3)(postcss@8.4.39)(react@18.3.1)(vue@3.4.33(typescript@5.5.3)))(@tarojs/react@3.6.31(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(react@18.3.1))(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)'
+  : dependencies:
       '@babel/runtime': 7.24.8
       '@tarojs/components': 3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(@types/react@18.3.3)(postcss@8.4.39)(react@18.3.1)(vue@3.4.33(typescript@5.5.3))
       '@tarojs/helper': 3.6.31
-      '@tarojs/plugin-framework-react': 3.6.31(@pmmmwh/react-refresh-webpack-plugin@0.5.15(react-refresh@0.11.0)(types-fest@3.13.1)(webpack-dev-server@4.11.1(webpack@5.78.0(@swc/core@1.3.96)))(webpack@5.78.0(@swc/core@1.3.96)))(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(react-refresh@0.11.0)(react@18.3.1)
-      '@tarojs/plugin-platform-h5': 3.6.31(@tarojs/helper@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3))
+      '@tarojs/plugin-framework-react': 3.6.31(@pmmmwh/react-refresh-webpack-plugin@0.5.15(react-refresh@0.11.0)(type-fest@3.13.1)(webpack-dev-server@4.11.1(webpack@5.78.0(@swc/core@1.3.96)))(webpack@5.78.0(@swc/core@1.3.96)))(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(react-refresh@0.11.0)(react@18.3.1)
+      '@tarojs/plugin-platform-h5': 3.6.31(@tarojs/helper@3.6.31)(@tarojs/taro@3.6.31(@tarojs/helper@3.6.31)(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@types/react@18.3.3)(postcss@8.4.39)(vue@3.4.33(typescript@5.5.3)))(@types/react@18.3.3)(postcss@8.4.39)(react@18.3.1)(vue@3.4.33(typescript@5.5.3))
       '@tarojs/react': 3.6.31(@tarojs/runtime@3.6.31(@tarojs/shared@3.6.31))(@tarojs/shared@3.6.31)(react@18.3.1)
       '@tarojs/runtime': 3.6.31(@tarojs/shared@3.6.31)
       '@tarojs/shared': 3.6.31
