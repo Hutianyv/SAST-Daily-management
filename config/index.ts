@@ -1,10 +1,10 @@
-import { defineConfig, type UserConfigExport } from '@tarojs/cli'
+import {defineConfig, type UserConfigExport} from '@tarojs/cli'
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import devConfig from './dev'
 import prodConfig from './prod'
 
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
-export default defineConfig(async (merge, { command, mode }) => {
+export default defineConfig(async (merge, {command, mode}) => {
   const baseConfig: UserConfigExport = {
     projectName: 'SAST-Daily-management',
     date: '2024-7-16',
@@ -19,17 +19,30 @@ export default defineConfig(async (merge, { command, mode }) => {
     outputRoot: 'dist',
     plugins: [
       '@tarojs/plugin-platform-lark',
-      '@tarojs/plugin-http'
+      '@tarojs/plugin-http',
+      [
+        '@tarojs/plugin-mock',
+        {
+          mocks: {
+            'GET /getCheckinList': {
+              statusCode: 200,
+              message: "success",
+              data: {
+                signedList: Array.from({length: 9}, () => Math.random().toString(36).substring(7)),
+                unsignedList: Array.from({length: 5}, () => Math.random().toString(36).substring(7)),
+              }
+            }
+          },
+        },
+      ]
     ],
-    defineConstants: {
-    },
+    defineConstants: {},
     copy: {
       patterns: [
         //防止svg引用被忽略
-        { from: 'src/assets', to: 'dist/assets' },
+        {from: 'src/assets', to: 'dist/assets'},
       ],
-      options: {
-      }
+      options: {}
     },
     framework: 'react',
     compiler: 'webpack5',
@@ -40,9 +53,7 @@ export default defineConfig(async (merge, { command, mode }) => {
       postcss: {
         pxtransform: {
           enable: true,
-          config: {
-
-          }
+          config: {}
         },
         url: {
           enable: true,
